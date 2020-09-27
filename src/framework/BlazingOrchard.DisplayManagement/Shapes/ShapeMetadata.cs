@@ -15,6 +15,7 @@ namespace BlazingOrchard.DisplayManagement.Shapes
         public string? Differentiator { get; set; }
         public string? PlacementSource { get; set; }
         public AlternatesCollection Alternates { get; set; } = new AlternatesCollection();
+        public AlternatesCollection Wrappers { get; set; } = new AlternatesCollection();
 
         /// <summary>
         /// Event used for a specific shape instance.

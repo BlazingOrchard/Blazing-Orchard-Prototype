@@ -52,6 +52,10 @@ ProjectSection(SolutionItems) = preProject
 	..\README.md = ..\README.md
 EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Liquid.Abstractions", "framework\BlazingOrchard.Liquid.Abstractions\BlazingOrchard.Liquid.Abstractions.csproj", "{42858053-7F92-4106-9008-B26586B70AE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Liquid", "modules\BlazingOrchard.Liquid\BlazingOrchard.Liquid.csproj", "{680E7F3C-3990-4C69-A21C-95FAB39707A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,6 +130,14 @@ Global
 		{07338853-9A70-41EB-A93D-55B43D324AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07338853-9A70-41EB-A93D-55B43D324AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07338853-9A70-41EB-A93D-55B43D324AD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42858053-7F92-4106-9008-B26586B70AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42858053-7F92-4106-9008-B26586B70AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42858053-7F92-4106-9008-B26586B70AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42858053-7F92-4106-9008-B26586B70AE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680E7F3C-3990-4C69-A21C-95FAB39707A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680E7F3C-3990-4C69-A21C-95FAB39707A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680E7F3C-3990-4C69-A21C-95FAB39707A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680E7F3C-3990-4C69-A21C-95FAB39707A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -154,5 +166,7 @@ Global
 		{A1F0BAE2-4F35-4BA4-9903-1CCB2C8C35CD} = {AC702ED6-C53D-4F26-BF45-752811A0F9D5}
 		{6095D2CA-BF44-4DA7-A3F3-2F0B5D2FE007} = {AC702ED6-C53D-4F26-BF45-752811A0F9D5}
 		{07338853-9A70-41EB-A93D-55B43D324AD5} = {3529A6F1-0722-4DC5-A67D-D083F3997B78}
+		{42858053-7F92-4106-9008-B26586B70AE3} = {3529A6F1-0722-4DC5-A67D-D083F3997B78}
+		{680E7F3C-3990-4C69-A21C-95FAB39707A5} = {AC702ED6-C53D-4F26-BF45-752811A0F9D5}
 	EndGlobalSection
 EndGlobal

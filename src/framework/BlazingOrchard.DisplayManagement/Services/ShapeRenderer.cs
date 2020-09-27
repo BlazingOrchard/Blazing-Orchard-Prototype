@@ -2,10 +2,12 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using BlazingOrchard.DisplayManagement.Blazor;
 using BlazingOrchard.DisplayManagement.Models;
 using BlazingOrchard.DisplayManagement.Shapes;
 using BlazingOrchard.Extensions;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.Extensions.Logging;
 
 namespace BlazingOrchard.DisplayManagement.Services
@@ -14,7 +16,7 @@ namespace BlazingOrchard.DisplayManagement.Services
     {
         private readonly IShapeTableManager _shapeTableManager;
         private readonly IServiceProvider _serviceProvider;
-        private ILogger _logger;
+        private readonly ILogger _logger;
 
         public ShapeRenderer(IShapeTableManager shapeTableManager,
             IServiceProvider serviceProvider,
@@ -29,6 +31,14 @@ namespace BlazingOrchard.DisplayManagement.Services
         {
             var componentType = await GetComponentTypeAsync(shape);
             return RenderComponent(componentType, shape);
+        }
+        
+        public async Task<MarkupString> RenderFragmentAsync(RenderFragment fragment, CancellationToken cancellationToken)
+        {
+            var builder = new RenderTreeBuilder();
+            fragment(builder);
+            var renderer= new TestRenderer(_serviceProvider, null);
+            Htmlizer.GetHtml(renderer, builder.)
         }
 
         private async Task<Type> GetComponentTypeAsync(IShape shape)
