@@ -8,10 +8,15 @@ namespace BlazingOrchard.DisplayManagement.Shapes
     public class Shape : Composite, IShape, IPositioned, IEnumerable<object>
     {
         public ShapeMetadata Metadata { get; set; } = new ShapeMetadata();
-        public string Position { get; set; }
         public bool HasItems => _items.Count > 0;
         private List<IPositioned> _items = new List<IPositioned>();
         private bool _sorted;
+
+        public string? Position
+        {
+            get => Metadata.Position;
+            set => Metadata.Position = value;
+        }
 
         public IEnumerable<dynamic> Items
         {
@@ -55,7 +60,7 @@ namespace BlazingOrchard.DisplayManagement.Shapes
 
         public Shape AddRange(IEnumerable<object> items, string? position = default)
         {
-            foreach (var item in items) 
+            foreach (var item in items)
                 Add(item, position);
 
             return this;
@@ -72,7 +77,25 @@ namespace BlazingOrchard.DisplayManagement.Shapes
                 }
             }
         }
-        
+
+        public IShape? Named(string shapeName)
+        {
+            foreach (var t in _items)
+                if (t is IShape shape && shape.Metadata.Name == shapeName)
+                    return shape;
+
+            return null;
+        }
+
+        public IShape? NormalizedNamed(string shapeName)
+        {
+            foreach (var t in _items)
+                if (t is IShape shape && shape.Metadata.Name?.Replace("__", "-") == shapeName)
+                    return shape;
+
+            return null;
+        }
+
         IEnumerator<object> IEnumerable<object>.GetEnumerator()
         {
             if (!_sorted)

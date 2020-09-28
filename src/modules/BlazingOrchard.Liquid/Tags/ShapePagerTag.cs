@@ -9,6 +9,7 @@ using BlazingOrchard.Liquid.Ast;
 using Fluid;
 using Fluid.Ast;
 using Fluid.Values;
+using Humanizer;
 using Newtonsoft.Json;
 
 namespace BlazingOrchard.Liquid.Tags
@@ -33,7 +34,7 @@ namespace BlazingOrchard.Liquid.Tags
                     foreach (var name in arguments.Names)
                     {
                         var argument = arguments[name];
-                        var propertyName = name.ToPascalCaseUnderscore();
+                        var propertyName = name.Pascalize().Underscore();
 
                         if (_properties.Contains(propertyName))
                         {

@@ -8,5 +8,6 @@ namespace BlazingOrchard.DisplayManagement.Services
     public interface IShapeRenderer
     {
         Task<RenderFragment> RenderShapeAsync(IShape shape, CancellationToken cancellationToken = default);
+        Task<string> RenderShapeAsStringAsync(IShape shape, CancellationToken cancellationToken = default);
     }
 }

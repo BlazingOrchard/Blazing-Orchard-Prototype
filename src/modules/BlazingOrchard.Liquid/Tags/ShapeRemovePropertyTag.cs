@@ -5,6 +5,7 @@ using BlazingOrchard.DisplayManagement.Shapes;
 using BlazingOrchard.Liquid.Ast;
 using Fluid;
 using Fluid.Ast;
+using Humanizer;
 
 namespace BlazingOrchard.Liquid.Tags
 {
@@ -20,7 +21,7 @@ namespace BlazingOrchard.Liquid.Tags
                 var propName = arguments["property"].Or(arguments.At(0)).ToStringValue();
                 if (!string.IsNullOrEmpty(propName))
                 {
-                    shape.Properties.Remove(propName.ToPascalCaseUnderscore());
+                    shape.Properties.Remove(propName.Pascalize().Underscore());
                 }
             }
 

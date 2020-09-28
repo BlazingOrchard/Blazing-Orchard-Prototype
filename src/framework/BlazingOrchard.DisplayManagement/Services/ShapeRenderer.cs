@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace BlazingOrchard.DisplayManagement.Services
 
         public ShapeRenderer(IShapeTableManager shapeTableManager,
             IServiceProvider serviceProvider,
+            ILoggerFactory loggerFactory,
             ILogger<ShapeRenderer> logger)
         {
             _shapeTableManager = shapeTableManager;
@@ -33,12 +35,13 @@ namespace BlazingOrchard.DisplayManagement.Services
             return RenderComponent(componentType, shape);
         }
         
-        public async Task<MarkupString> RenderFragmentAsync(RenderFragment fragment, CancellationToken cancellationToken)
+        public async Task<string> RenderShapeAsStringAsync(IShape shape, CancellationToken cancellationToken)
         {
-            var builder = new RenderTreeBuilder();
-            fragment(builder);
-            var renderer= new TestRenderer(_serviceProvider, null);
-            Htmlizer.GetHtml(renderer, builder.)
+            var host = new TestHost(_serviceProvider);
+            var attributes = new Dictionary<string, object>{ ["Model"] = shape };
+            var componentType = await GetComponentTypeAsync(shape);
+            var renderedComponent = host.AddComponent(componentType, attributes);
+            return renderedComponent.GetMarkup();
         }
 
         private async Task<Type> GetComponentTypeAsync(IShape shape)

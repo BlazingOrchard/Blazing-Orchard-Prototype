@@ -1,12 +1,11 @@
 using System;
 using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
+using BlazingOrchard.Services;
 using Fluid;
 using Fluid.Values;
-using OrchardCore.Liquid;
-using OrchardCore.Infrastructure.Html;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace OrchardCore.DisplayManagement.Liquid.Filters
+namespace BlazingOrchard.Liquid.Filters
 {
     public class SanitizeHtmlFilter : ILiquidFilter
     {

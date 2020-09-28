@@ -66,24 +66,16 @@ namespace BlazingOrchard.Liquid.Filters
 
         public static ValueTask<FluidValue> ShapeStringify(FluidValue input, FilterArguments arguments, TemplateContext context)
         {
-            static async ValueTask<FluidValue> Awaited(Task<IHtmlContent> task)
-            {
-                return new HtmlContentValue(await task);
-            }
+            static async ValueTask<FluidValue> Awaited(Task<string> task) => new StringValue(await task);
 
             if (input.ToObjectValue() is IShape shape)
             {
-                if (!context.AmbientValues.TryGetValue("DisplayHelper", out var item) || !(item is IDisplayHelper displayHelper))
-                {
-                    return ThrowArgumentException<ValueTask<FluidValue>>("DisplayHelper missing while invoking 'shape_stringify'");
-                }
+                if (!context.AmbientValues.TryGetValue("DisplayHelper", out var item) || !(item is IShapeRenderer displayHelper))
+                    return ThrowArgumentException<ValueTask<FluidValue>>(
+                        "DisplayHelper missing while invoking 'shape_stringify'");
 
-                var task = displayHelper.ShapeExecuteAsync(shape);
-                if (!task.IsCompletedSuccessfully)
-                {
-                    return Awaited(task);
-                }
-                return new ValueTask<FluidValue>(new HtmlContentValue(task.Result));
+                var task = displayHelper.RenderShapeAsStringAsync(shape);
+                return !task.IsCompletedSuccessfully ? Awaited(task) : new ValueTask<FluidValue>(new StringValue(task.Result));
             }
 
             return new ValueTask<FluidValue>(NilValue.Instance);
@@ -91,24 +83,16 @@ namespace BlazingOrchard.Liquid.Filters
 
         public static ValueTask<FluidValue> ShapeRender(FluidValue input, FilterArguments arguments, TemplateContext context)
         {
-            static async ValueTask<FluidValue> Awaited(Task<IHtmlContent> task)
-            {
-                return new HtmlContentValue(await task);
-            }
+            static async ValueTask<FluidValue> Awaited(Task<string> task) => new StringValue(await task);
 
             if (input.ToObjectValue() is IShape shape)
             {
-                if (!context.AmbientValues.TryGetValue("DisplayHelper", out var item) || !(item is IDisplayHelper displayHelper))
-                {
-                    return ThrowArgumentException<ValueTask<FluidValue>>("DisplayHelper missing while invoking 'shape_render'");
-                }
+                if (!context.AmbientValues.TryGetValue("DisplayHelper", out var item) || !(item is IShapeRenderer displayHelper))
+                    return ThrowArgumentException<ValueTask<FluidValue>>(
+                        "DisplayHelper missing while invoking 'shape_render'");
 
-                var task = displayHelper.ShapeExecuteAsync(shape);
-                if (!task.IsCompletedSuccessfully)
-                {
-                    return Awaited(task);
-                }
-                return new ValueTask<FluidValue>(new HtmlContentValue(task.Result));
+                var task = displayHelper.RenderShapeAsStringAsync(shape);
+                return !task.IsCompletedSuccessfully ? Awaited(task) : new ValueTask<FluidValue>(new StringValue(task.Result));
             }
 
             return new ValueTask<FluidValue>(NilValue.Instance);
@@ -119,9 +103,8 @@ namespace BlazingOrchard.Liquid.Filters
             if (input.ToObjectValue() is IShape shape)
             {
                 foreach (var name in arguments.Names)
-                {
-                    shape.Properties[name.ToPascalCaseUnderscore()] = arguments[name].ToObjectValue();
-                }
+                    shape.Properties[name.Pascalize().Underscore()] = arguments[name].ToObjectValue();
+                
                 return FluidValue.Create(shape);
             }
 
@@ -129,9 +112,6 @@ namespace BlazingOrchard.Liquid.Filters
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
-        private static T ThrowArgumentException<T>(string message)
-        {
-            throw new ArgumentException(message);
-        }
+        private static T ThrowArgumentException<T>(string message) => throw new ArgumentException(message);
     }
 }

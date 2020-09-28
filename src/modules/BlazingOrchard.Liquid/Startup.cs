@@ -2,6 +2,7 @@
 using BlazingOrchard.Contents.Display.Extensions;
 using BlazingOrchard.Liquid.Drivers;
 using BlazingOrchard.Liquid.Models;
+using BlazingOrchard.Liquid.Services;
 using BlazingOrchard.Modules;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,7 +14,8 @@ namespace BlazingOrchard.Liquid
         {
             services
                 .AddContentPart<LiquidPart>()
-                .AddContentPartDisplayDriver<LiquidPartDisplay>();
+                .AddContentPartDisplayDriver<LiquidPartDisplay>()
+                .AddSingleton<ILiquidTemplateManager, LiquidTemplateManager>();
         }
     }
 }

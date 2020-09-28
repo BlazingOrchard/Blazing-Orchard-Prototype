@@ -28,13 +28,13 @@ namespace BlazingOrchard.Liquid.Drivers
                         shape.ContentItem = contentPart.ContentItem;
                         shape.Liquid = contentPart.Liquid!;
                         shape.LiquidBodyPart = contentPart;
-                        shape.Html = await ToHtmlAsync(contentPart, shape);
+                        shape.Html = (await ToHtmlAsync(contentPart, shape)) ?? "";
                         return shape;
                     })
                 .DefaultLocation("5");
         }
 
-        private async Task<string> ToHtmlAsync(LiquidPart liquidPart, IShape shape) =>
+        private async Task<string?> ToHtmlAsync(LiquidPart liquidPart, IShape shape) =>
             await _liquidTemplateManager.RenderAsync(
                 liquidPart.Liquid,
                 _htmlEncoder,
