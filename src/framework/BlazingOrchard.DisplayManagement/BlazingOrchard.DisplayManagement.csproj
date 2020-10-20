@@ -14,7 +14,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\..\BlazorUnitTestingPrototype\Microsoft.AspNetCore.Components.Testing\Microsoft.AspNetCore.Components.Testing.csproj" />
       <ProjectReference Include="..\BlazingOrchard.Abstractions\BlazingOrchard.Abstractions.csproj" />
     </ItemGroup>
 
