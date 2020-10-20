@@ -14,7 +14,5 @@ namespace BlazingOrchard.DisplayManagement.Services
             int sequence,
             RenderTreeBuilder renderTreeBuilder,
             CancellationToken cancellationToken = default);
-
-            CancellationToken cancellationToken = default);
     }
 }
