@@ -1,6 +1,6 @@
 {
-  "name": "Orchard.Canopy.Web",
-  "short_name": "Orchard.Canopy.Web",
+  "name": "BlazingOrchard",
+  "short_name": "BlazingOrchard",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
