@@ -1,0 +1,7 @@
+﻿@attribute [Shape("Blog__TitlePart")]
+@inherits ShapeTemplate
+<h1 class="alert alert-info">@Title</h1>
+
+@code {
+    private string Title => Model.Title;
+}

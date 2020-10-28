@@ -1,0 +1,20 @@
+﻿@using BlazingOrchard.OrchardCore.Client.Options
+@using Microsoft.Extensions.Options
+@inherits ShapeTemplate
+@attribute [Shape("Content__Article")]
+@inject IOptions<OrchardApiClientOptions> OrchardOptions
+
+<h3>@Model.ContentItem.DisplayText</h3>
+<div>
+    <small>(This is a shape override for Content-Article)</small>
+</div>
+<strong>@Model.ContentItem.Content.Article.Subtitle.Text</strong>
+
+@Html
+
+<img src="@MediaUrl((string)Model.ContentItem.Content.Article.Image.Paths.First)" alt="" class="img-fluid" width="640" />
+
+@code {
+    private MarkupString Html => (MarkupString)(string)Model.ContentItem.Content.HtmlBodyPart.Html;
+    private string MediaUrl(string fileName) => $"{OrchardOptions.Value.ServerUrl.ToString().TrimEnd('/')}/media/{fileName}";
+}

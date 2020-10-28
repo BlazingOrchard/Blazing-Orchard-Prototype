@@ -1,0 +1,17 @@
+﻿<div>
+    <p>Current count: @currentCount</p>
+    <button class="btn btn-primary" @onclick="IncrementCount">@ButtonText</button>
+</div>
+
+@code {
+
+    [Parameter]
+    public string ButtonText { get; set; } = "Click me";
+    
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

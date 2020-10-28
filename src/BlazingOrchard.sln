@@ -7,54 +7,56 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{54FA2A2B-0C0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{AC702ED6-C53D-4F26-BF45-752811A0F9D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Contents", "modules\BlazingOrchard.Contents\BlazingOrchard.Contents.csproj", "{B4D79FE3-C478-4EE9-86D7-62333C639914}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Contents", "modules\BlazingOrchard.Contents\BlazingOrchard.Contents.csproj", "{B4D79FE3-C478-4EE9-86D7-62333C639914}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "framework", "framework", "{3529A6F1-0722-4DC5-A67D-D083F3997B78}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{8C2597E9-A1E2-4896-9608-76296714798D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Web.Client", "samples\BlazingOrchard.Web\Client\BlazingOrchard.Web.Client.csproj", "{AD60918D-AB9B-4463-A2B0-73B794806063}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Web.Client", "samples\BlazingOrchard.Web\Client\BlazingOrchard.Web.Client.csproj", "{AD60918D-AB9B-4463-A2B0-73B794806063}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Web.Server", "samples\BlazingOrchard.Web\Server\BlazingOrchard.Web.Server.csproj", "{B554B0F3-975F-4453-8A0F-A67C1493306F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Web.Server", "samples\BlazingOrchard.Web\Server\BlazingOrchard.Web.Server.csproj", "{B554B0F3-975F-4453-8A0F-A67C1493306F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{4D86BD98-C5F0-42CB-9E37-E50C0957E77F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Contents.Abstractions", "framework\BlazingOrchard.Contents.Abstractions\BlazingOrchard.Contents.Abstractions.csproj", "{186E588A-A682-44E2-A0CB-B76CFA6C26DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Contents.Abstractions", "framework\BlazingOrchard.Contents.Abstractions\BlazingOrchard.Contents.Abstractions.csproj", "{186E588A-A682-44E2-A0CB-B76CFA6C26DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.DisplayManagement", "framework\BlazingOrchard.DisplayManagement\BlazingOrchard.DisplayManagement.csproj", "{0DFA8171-6314-4A9E-89EA-544C84E80AC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.DisplayManagement", "framework\BlazingOrchard.DisplayManagement\BlazingOrchard.DisplayManagement.csproj", "{0DFA8171-6314-4A9E-89EA-544C84E80AC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Abstractions", "framework\BlazingOrchard.Abstractions\BlazingOrchard.Abstractions.csproj", "{90AACBFE-637F-474E-85BC-B1D22A8B2ACE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Abstractions", "framework\BlazingOrchard.Abstractions\BlazingOrchard.Abstractions.csproj", "{90AACBFE-637F-474E-85BC-B1D22A8B2ACE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Contents.Display", "framework\BlazingOrchard.Contents.Display\BlazingOrchard.Contents.Display.csproj", "{DB7FFC3B-BD88-4C9F-B492-D4AD6F559840}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Contents.Display", "framework\BlazingOrchard.Contents.Display\BlazingOrchard.Contents.Display.csproj", "{DB7FFC3B-BD88-4C9F-B492-D4AD6F559840}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Title", "modules\BlazingOrchard.Title\BlazingOrchard.Title.csproj", "{9922A2C0-93B7-40F1-B075-DBD535A9F35B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Title", "modules\BlazingOrchard.Title\BlazingOrchard.Title.csproj", "{9922A2C0-93B7-40F1-B075-DBD535A9F35B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.OrchardCore.Client", "framework\BlazingOrchard.OrchardCore.Client\BlazingOrchard.OrchardCore.Client.csproj", "{A5ED27A7-06DC-4B40-A1FA-222DA66C3064}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.OrchardCore.Client", "framework\BlazingOrchard.OrchardCore.Client\BlazingOrchard.OrchardCore.Client.csproj", "{A5ED27A7-06DC-4B40-A1FA-222DA66C3064}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Html", "modules\BlazingOrchard.Html\BlazingOrchard.Html.csproj", "{5DA0AE08-DC64-4E64-A97C-A086F9BDBF95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Html", "modules\BlazingOrchard.Html\BlazingOrchard.Html.csproj", "{5DA0AE08-DC64-4E64-A97C-A086F9BDBF95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.ContentFields", "modules\BlazingOrchard.ContentFields\BlazingOrchard.ContentFields.csproj", "{E5F86A74-6F82-4356-9DBB-0738DBA5D2F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.ContentFields", "modules\BlazingOrchard.ContentFields\BlazingOrchard.ContentFields.csproj", "{E5F86A74-6F82-4356-9DBB-0738DBA5D2F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard", "framework\BlazingOrchard\BlazingOrchard.csproj", "{3762B1C8-D19B-4B06-B12A-1711BE4474DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard", "framework\BlazingOrchard\BlazingOrchard.csproj", "{3762B1C8-D19B-4B06-B12A-1711BE4474DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Web.Application", "samples\BlazingOrchard.Web.Application\BlazingOrchard.Web.Application.csproj", "{4F19134B-7B6E-472C-99C4-8D8781B03F33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Web.Application", "samples\BlazingOrchard.Web.Application\BlazingOrchard.Web.Application.csproj", "{4F19134B-7B6E-472C-99C4-8D8781B03F33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Menu", "modules\BlazingOrchard.Menu\BlazingOrchard.Menu.csproj", "{1C783038-6B71-4A6C-BE0D-1D59A469CD2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Menu", "modules\BlazingOrchard.Menu\BlazingOrchard.Menu.csproj", "{1C783038-6B71-4A6C-BE0D-1D59A469CD2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Alias", "modules\BlazingOrchard.Alias\BlazingOrchard.Alias.csproj", "{A1F0BAE2-4F35-4BA4-9903-1CCB2C8C35CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Alias", "modules\BlazingOrchard.Alias\BlazingOrchard.Alias.csproj", "{A1F0BAE2-4F35-4BA4-9903-1CCB2C8C35CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Markdown", "modules\BlazingOrchard.Markdown\BlazingOrchard.Markdown.csproj", "{6095D2CA-BF44-4DA7-A3F3-2F0B5D2FE007}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Markdown", "modules\BlazingOrchard.Markdown\BlazingOrchard.Markdown.csproj", "{6095D2CA-BF44-4DA7-A3F3-2F0B5D2FE007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Core", "framework\BlazingOrchard.Core\BlazingOrchard.Core.csproj", "{07338853-9A70-41EB-A93D-55B43D324AD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Core", "framework\BlazingOrchard.Core\BlazingOrchard.Core.csproj", "{07338853-9A70-41EB-A93D-55B43D324AD5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{3C11BE10-39E8-434B-9D56-4749580B90E9}"
-ProjectSection(SolutionItems) = preProject
-	..\README.md = ..\README.md
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Liquid.Abstractions", "framework\BlazingOrchard.Liquid.Abstractions\BlazingOrchard.Liquid.Abstractions.csproj", "{42858053-7F92-4106-9008-B26586B70AE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Liquid.Abstractions", "framework\BlazingOrchard.Liquid.Abstractions\BlazingOrchard.Liquid.Abstractions.csproj", "{42858053-7F92-4106-9008-B26586B70AE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingOrchard.Liquid", "modules\BlazingOrchard.Liquid\BlazingOrchard.Liquid.csproj", "{680E7F3C-3990-4C69-A21C-95FAB39707A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingOrchard.Liquid", "modules\BlazingOrchard.Liquid\BlazingOrchard.Liquid.csproj", "{680E7F3C-3990-4C69-A21C-95FAB39707A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorOIDC", "samples\BlazorOIDC\BlazorOIDC.csproj", "{D7B12A66-FD15-4F17-8126-02AA8CEF92EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -138,12 +140,13 @@ Global
 		{680E7F3C-3990-4C69-A21C-95FAB39707A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{680E7F3C-3990-4C69-A21C-95FAB39707A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{680E7F3C-3990-4C69-A21C-95FAB39707A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B12A66-FD15-4F17-8126-02AA8CEF92EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B12A66-FD15-4F17-8126-02AA8CEF92EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B12A66-FD15-4F17-8126-02AA8CEF92EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B12A66-FD15-4F17-8126-02AA8CEF92EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {24BC2F4C-A865-4606-9B13-723FF6690FC9}
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AC702ED6-C53D-4F26-BF45-752811A0F9D5} = {54FA2A2B-0C09-40A0-B3BF-B176469A7234}
@@ -168,5 +171,9 @@ Global
 		{07338853-9A70-41EB-A93D-55B43D324AD5} = {3529A6F1-0722-4DC5-A67D-D083F3997B78}
 		{42858053-7F92-4106-9008-B26586B70AE3} = {3529A6F1-0722-4DC5-A67D-D083F3997B78}
 		{680E7F3C-3990-4C69-A21C-95FAB39707A5} = {AC702ED6-C53D-4F26-BF45-752811A0F9D5}
+		{D7B12A66-FD15-4F17-8126-02AA8CEF92EA} = {8C2597E9-A1E2-4896-9608-76296714798D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24BC2F4C-A865-4606-9B13-723FF6690FC9}
 	EndGlobalSection
 EndGlobal

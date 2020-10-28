@@ -21,7 +21,7 @@
 
         if (linkMenuItemPart != null)
         {
-            var menuItemUrl = linkMenuItemPart.Url.TrimStart('~');
+            var menuItemUrl = "pages" + linkMenuItemPart.Url.TrimStart('~');
             var matchMode = string.IsNullOrWhiteSpace(menuItemUrl.TrimStart('/')) ? NavLinkMatch.All : NavLinkMatch.Prefix;
             var icon = menuItem.Get<ContentPart>(menuItem.ContentType).Get<TextField>("IconClass")?.Text ?? "";
             <li class="nav-item px-3">
